@@ -2,7 +2,7 @@ import React from "react";
 import cls from "classnames";
 
 export default function Section({
-  padding = true,
+  padding = false,
   ...props
 }: {
   children: React.ReactNode;

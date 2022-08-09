@@ -1,8 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @layer base {
+  body {
+    @apply font-inter text-base md:text-lg;
+  }
   h1 {
     @apply text-5xl md:text-6xl mb-7 md:mb-8;
   }
@@ -21,7 +25,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold leading-tight text-[#B35048];
+    @apply font-black leading-tight text-[#B35048];
   }
 }
 

@@ -1,17 +1,48 @@
 import * as React from "react";
-import type { HeadFC } from "gatsby";
+import { HeadFC, Link } from "gatsby";
 import ReactPlayer from "react-player";
 import heroVideo from "../assets/hero_video.mp4";
-import { RiArrowDropRightFill, RiSearchLine } from "react-icons/ri";
+import {
+  RiArrowDropRightFill,
+  RiFacebookFill,
+  RiSearchLine,
+  RiTwitterFill,
+} from "react-icons/ri";
 import TypistLoop from "../components/Typist";
 import Typist from "react-typist";
 import Section from "../components/Section";
 import { StaticImage } from "gatsby-plugin-image";
+import Person from "../components/Person";
 
 const IndexPage = () => {
   return (
     <main>
-      <section className="w-full h-[90vh] hero_video relative">
+      <section className="px-4 md:hidden">
+        <h1 className="text-2xl font-medium text-[#483635] h-36 flex items-center">
+          <TypistLoop interval={0}>
+            {[
+              "Deep in the heart of Brocéliande Forest roam a troop of 10,000 Ape",
+              "",
+            ].map((text) => (
+              <Typist key={text} startDelay={0}>
+                {text}
+                <Typist.Backspace count={text.length} delay={2000} />
+              </Typist>
+            ))}
+          </TypistLoop>
+        </h1>
+        <div className="my-6">
+          <ReactPlayer
+            url={heroVideo}
+            playing
+            loop
+            muted
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </section>
+      <section className="hidden md:block w-full h-[90vh] hero_video relative">
         <ReactPlayer
           url={heroVideo}
           playing
@@ -20,7 +51,7 @@ const IndexPage = () => {
           width="100%"
           height="100%"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center">
+        <div className="hidden absolute top-0 left-0 w-full h-full bg-black/50 md:flex justify-center items-center">
           <h1 className="text-7xl font-black text-center max-w-6xl text-[#FEF3C0] text-stroke">
             <TypistLoop interval={0}>
               {[
@@ -37,23 +68,23 @@ const IndexPage = () => {
       </section>
       <Section
         padding
-        className="flex flex-col items-start gap-10 md:gap-2 md:text-center md:items-center"
+        className="flex flex-col items-start gap-6 md:gap-2 md:text-center md:items-center"
         containerClass="bg-[#F3F3F3]/90"
       >
-        <p className="text-2xl">
+        <p className="text-xl">
           A community of 10,000 Civilized Apes teeming with life.
         </p>
-        <p className="text-2xl">
+        <p className="text-xl">
           We symbolize freedom and the possibility of a life truly lived.
         </p>
-        <button className="bg-[#B35048] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6">
+        <button className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6">
           Join Waitlist
           <RiArrowDropRightFill className="text-white" />
         </button>
       </Section>
       <Section
         padding
-        className="flex flex-col md:flex-row items-start gap-8 md:justify-around"
+        className="flex flex-col md:flex-row items-start gap-10 md:justify-around"
         containerClass="bg-white"
       >
         <StaticImage
@@ -87,7 +118,7 @@ const IndexPage = () => {
             in-depth courses and via consultation. Courses including (but are
             not limited to)
           </p>
-          <ol className="list-disc list-inside grid grid-cols-1 sm:grid-cols-2 gap-2 font-medium gap-x-5">
+          <ol className="list-disc text-base list-inside grid grid-cols-1 sm:grid-cols-2 gap-2 font-medium gap-x-5">
             <li>Technical Analysis</li>
             <li>Product Management</li>
             <li>UI/UX Design</li>
@@ -134,11 +165,11 @@ const IndexPage = () => {
       <Section
         padding
         className="flex flex-col items-start gap-8"
-        containerClass="bg-white"
+        containerClass="bg-[#F3F3F3]/90"
       >
         <div className="flex flex-col md:items-center items-start md:gap-2 bg-[#ECD980] py-14 px-10 md:text-center rounded-3xl">
           <h2 className="md:text-4xl text-[#4D3937] font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Join The Waiting List
           </h2>
           <p className="font-normal">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel,
@@ -149,13 +180,44 @@ const IndexPage = () => {
           <div className="flex justify-between items-stretch my-5 w-full max-w-sm shadow-md">
             <input
               type="email"
-              className="bg-white placeholder-gray-600 font-light p-2 w-full"
+              className="bg-white placeholder-gray-600 font-light p-3 w-full"
               placeholder="Email"
             />
-            <button className="bg-[#4D3937] flex-none px-2 text-white">
+            <button className="bg-[#4D3937] flex-none px-3 text-white">
               <RiSearchLine className="h-6 w-6" />
             </button>
           </div>
+        </div>
+      </Section>
+      <Section padding containerClass="bg-white">
+        <h2 className="md:text-4xl text-[#4D3937] font-semibold text-center">
+          cApe Team
+        </h2>
+        <div className="flex flex-wrap justify-between">
+          {new Array(8).fill("").map((e, i) => (
+            <Person />
+          ))}
+        </div>
+      </Section>
+      <Section
+        padding
+        className="flex flex-col items-stretch gap-2"
+        containerClass="bg-[#F3F3F3]/90"
+      >
+        <h3 className="md:text-4xl font-semibold text-center text-black">
+          cApe
+        </h3>
+        <p className="text-gray-700 text-center text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, natus.
+          Itaque laudantium.
+        </p>
+        <div className="text-center flex justify-center gap-2 font-medium">
+          <Link to="#">Explore</Link>
+          <Link to="#">Jobs</Link>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <RiFacebookFill className="w-6 h-6 text-blue-800" />
+          <RiTwitterFill className="w-6 h-6 text-blue-800" />
         </div>
       </Section>
     </main>
