@@ -51,11 +51,12 @@ const IndexPage = () => {
           width="100%"
           height="100%"
         />
-        <div className="hidden absolute top-0 left-0 w-full h-full bg-black/50 md:flex justify-center items-center">
+        <div className="hidden absolute top-0 left-0 w-full h-full bg-black/50 md:flex justify-center md:pt-20">
           <h1 className="text-7xl font-black text-center max-w-6xl text-[#FEF3C0] text-stroke">
             <TypistLoop interval={0}>
               {[
                 "Deep in the heart of Brocéliande Forest roam a troop of 10,000 Ape",
+                "",
               ].map((text) => (
                 <Typist key={text} startDelay={0}>
                   {text}
@@ -68,7 +69,7 @@ const IndexPage = () => {
       </section>
       <Section
         padding
-        className="flex flex-col items-start gap-6 md:gap-2 md:text-center md:items-center"
+        className="flex flex-col items-start gap-6 sm:gap-2 sm:text-center sm:items-center"
         containerClass="bg-[#F3F3F3]/90"
       >
         <p className="text-xl">
@@ -84,7 +85,7 @@ const IndexPage = () => {
       </Section>
       <Section
         padding
-        className="flex flex-col md:flex-row items-start gap-10 md:justify-around"
+        className="flex flex-col md:flex-row items-start sm:items-center md:items-start gap-10 md:justify-around"
         containerClass="bg-white"
       >
         <StaticImage
@@ -103,7 +104,7 @@ const IndexPage = () => {
       </Section>
       <Section
         padding
-        className="flex flex-col md:flex-row items-start gap-8 md:justify-around"
+        className="flex flex-col md:flex-row items-start gap-8 sm:items-center md:items-start md:justify-around"
         containerClass="bg-[#F3F3F3]/90"
       >
         <div className="flex flex-col items-start gap-2 max-w-lg">
@@ -139,7 +140,7 @@ const IndexPage = () => {
       </Section>
       <Section
         padding
-        className="flex flex-col md:flex-row items-start gap-8 md:justify-around"
+        className="flex flex-col md:flex-row items-start sm:items-center md:items-start gap-8 md:justify-around"
         containerClass="bg-white"
       >
         <StaticImage
@@ -167,7 +168,7 @@ const IndexPage = () => {
         className="flex flex-col items-start gap-8"
         containerClass="bg-[#F3F3F3]/90"
       >
-        <div className="flex flex-col md:items-center items-start md:gap-2 bg-[#ECD980] py-14 px-10 md:text-center rounded-3xl">
+        <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] py-14 px-10 sm:text-center rounded-3xl">
           <h2 className="md:text-4xl text-[#4D3937] font-semibold">
             Join The Waiting List
           </h2>
@@ -193,7 +194,7 @@ const IndexPage = () => {
         <h2 className="md:text-4xl text-[#4D3937] font-semibold text-center">
           cApe Team
         </h2>
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap gap-6 justify-center">
           {new Array(8).fill("").map((e, i) => (
             <Person />
           ))}
