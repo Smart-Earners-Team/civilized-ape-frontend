@@ -112,7 +112,7 @@ const IndexPage = () => {
           <StaticImage
             src="../images/image 3.png"
             alt="Group 9"
-            className="w-full max-w-lg md:hidden"
+            className="w-full max-w-lg block md:hidden"
           />
           <p className="text-xl my-5">
             We are on a mission to help you be the best you can be, through our
@@ -135,7 +135,7 @@ const IndexPage = () => {
         <StaticImage
           src="../images/image 3.png"
           alt="Group 9"
-          className="w-full max-w-lg hidden md:block"
+          className="w-full max-w-lg !hidden md:!block"
         />
       </Section>
       <Section
