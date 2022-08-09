@@ -31,7 +31,7 @@ const IndexPage = () => {
             ))}
           </TypistLoop>
         </h1>
-        <div className="my-6">
+        <div className="my-6 min-h-[250px] bg-gray-500">
           <ReactPlayer
             url={heroVideo}
             playing
