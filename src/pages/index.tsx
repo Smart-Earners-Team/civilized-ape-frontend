@@ -31,7 +31,7 @@ const IndexPage = () => {
             ))}
           </TypistLoop>
         </h1>
-        <div className="my-6 min-h-[250px] bg-gray-500">
+        <div className="my-6 bg-gray-500 w-full h-0 pb-[56.25%] relative">
           <ReactPlayer
             url={heroVideo}
             playing
@@ -39,6 +39,7 @@ const IndexPage = () => {
             muted
             width="100%"
             height="100%"
+            style={{ position: "absolute", left: 0, top: 0 }}
           />
         </div>
       </section>
