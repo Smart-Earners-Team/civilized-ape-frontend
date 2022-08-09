@@ -21,12 +21,7 @@ export default function Navbar() {
   return (
     <Section
       containerClass="bg-transparent w-full z-50"
-      className={cls(
-        "!max-w-screen-2xl bg-white shadow shadow-gray-400/20 md:bg-[#09030B] md:text-white",
-        {
-          "shadow-lg": !open,
-        }
-      )}
+      className="!max-w-screen-2xl bg-white shadow shadow-gray-400/20 md:bg-[#09030B] md:text-white"
     >
       <div className="flex flex-col py-6 px-4 md:items-center md:gap-6 md:flex-row md:px-6">
         <div className="flex flex-row items-center justify-between">
