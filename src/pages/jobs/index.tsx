@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { Fragment } from "react";
-import { Navbar } from "../components/Navbar";
-import Section from "../components/Section";
+import { Navbar } from "../../components/Navbar";
+import Section from "../../components/Section";
 import { MdLocationOn } from "react-icons/md";
 import { Link } from "gatsby";
 import { RiFacebookFill, RiTwitterFill } from "react-icons/ri";
@@ -86,7 +86,7 @@ function FindJobsPage() {
 const JobCard = () => {
   return (
     <Link
-      to="/job/kryptolite"
+      to="/jobs/kryptolite"
       className="bg-white p-6 w-full min-w-full md:min-w-0 rounded-xl flex flex-col gap-2 shadow-md border md:max-w-sm"
     >
       <div className="flex justify-between items-center mb-3">
