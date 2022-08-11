@@ -18,7 +18,7 @@ const IndexPage = () => {
           <div className="font-bold text-xl -mt-5">at Kryptolite</div>
           <Section
             padding
-            className="md:hidden w-full flex flex-col items-start gap-3"
+            className="md:hidden !px-0 w-full flex flex-col items-start gap-3"
           >
             <button className="uppercase bg-green-700 p-3 rounded-md font-medium text-white">
               Apply Now
@@ -82,7 +82,7 @@ const IndexPage = () => {
         </div>
         <Section
           padding
-          className="hidden w-full md:flex flex-col items-start gap-3 flex-none"
+          className="hidden !px-0 w-full md:flex flex-col items-start gap-3 flex-none"
         >
           <button className="uppercase bg-green-700 p-3 rounded-md font-medium text-white">
             Apply Now
