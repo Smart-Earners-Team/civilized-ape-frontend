@@ -40,7 +40,7 @@ function FindJobsPage() {
         <span className="bg-[#FAED7B] text-[#4F2B01] p-3 rounded-r-full text-lg font-medium">
           Featured Lists
         </span>
-        <div className="my-6 flex flex-row overflow-x-auto gap-4">
+        <div className="py-6 flex flex-row overflow-x-auto gap-4">
           <JobCard />
           <JobCard />
           <JobCard />
@@ -51,7 +51,7 @@ function FindJobsPage() {
         <span className="bg-gray-300 text-gray-800 p-3 rounded-r-full text-lg font-medium">
           Others
         </span>
-        <div className="my-6 flex flex-col md:flex-row overflow-x-auto gap-6">
+        <div className="py-6 flex flex-col md:flex-row overflow-x-auto gap-6">
           <JobCard />
           <JobCard />
           <JobCard />
