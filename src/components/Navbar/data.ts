@@ -12,5 +12,5 @@ export const navigationItems: NavigationType[] = [
     title: "Explore",
     href: "#",
   },
-  { id: 2, title: "Jobs", href: "#" },
+  { id: 2, title: "Jobs", href: "/find-jobs" },
 ];

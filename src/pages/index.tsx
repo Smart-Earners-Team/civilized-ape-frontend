@@ -208,28 +208,28 @@ const IndexPage = () => {
             ))}
           </div>
         </Section>
-        <Section
-          padding
-          className="flex flex-col items-stretch gap-2"
-          containerClass="bg-[#F3F3F3]/90"
-        >
-          <h3 className="md:text-4xl font-semibold text-center text-black">
-            cApe
-          </h3>
-          <p className="text-gray-700 text-center text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
-            natus. Itaque laudantium.
-          </p>
-          <div className="text-center flex justify-center gap-2 font-medium">
-            <Link to="#">Explore</Link>
-            <Link to="#">Jobs</Link>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <RiFacebookFill className="w-6 h-6 text-blue-800" />
-            <RiTwitterFill className="w-6 h-6 text-blue-800" />
-          </div>
-        </Section>
       </main>
+      <Section
+        padding
+        className="flex flex-col items-stretch gap-2"
+        containerClass="bg-[#F3F3F3]/90"
+      >
+        <h3 className="md:text-4xl font-semibold text-center text-black">
+          cApe
+        </h3>
+        <p className="text-gray-700 text-center text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, natus.
+          Itaque laudantium.
+        </p>
+        <div className="text-center flex justify-center gap-2 font-medium">
+          <Link to="#">Explore</Link>
+          <Link to="#">Jobs</Link>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <RiFacebookFill className="w-6 h-6 text-blue-800" />
+          <RiTwitterFill className="w-6 h-6 text-blue-800" />
+        </div>
+      </Section>
     </Fragment>
   );
 };
