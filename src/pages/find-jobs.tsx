@@ -17,13 +17,13 @@ function FindJobsPage() {
           className="w-full h-full"
         />
         <div
-          className="absolute top-0 left-0 w-full h-full bg-black/80 md:flex justify-center px-6 md:pt-20 flex flex-col
-            gap-4 items-start"
+          className="absolute top-0 left-0 w-full h-full bg-black/70 md:flex justify-center px-6 md:pt-20 flex flex-col
+            gap-4 items-start md:items-center md:text-center"
         >
           <h1 className="text-4xl font-black text-white">
             Tech Job Opportunities
           </h1>
-          <p className="text-lg text-white font-light">
+          <p className="text-lg text-white font-light max-w-screen-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris
             elit bibendum sem nisi ultrices in nisi. Et egestas nunc, lacus
             vestibulum enim accumsan elit nibh. Integer felis.
@@ -51,7 +51,7 @@ function FindJobsPage() {
         <span className="bg-[#FAED7B] text-[#4F2B01] p-3 rounded-r-full text-lg font-medium">
           Others
         </span>
-        <div className="my-6 flex flex-col overflow-x-auto gap-6">
+        <div className="my-6 flex flex-col md:flex-row overflow-x-auto gap-6">
           <JobCard />
           <JobCard />
           <JobCard />
@@ -85,7 +85,7 @@ function FindJobsPage() {
 
 const JobCard = () => {
   return (
-    <div className="bg-white p-6 w-full min-w-full rounded-xl flex flex-col gap-2 shadow-md border">
+    <div className="bg-white p-6 w-full min-w-full md:min-w-0 rounded-xl flex flex-col gap-2 shadow-md border md:max-w-sm">
       <div className="flex justify-between items-center mb-3">
         <div className="flex items-center gap-1">
           <MdLocationOn size={24} className="text-gray-600" />
