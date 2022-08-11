@@ -48,7 +48,7 @@ function FindJobsPage() {
         </div>
       </Section>
       <Section padding>
-        <span className="bg-[#FAED7B] text-[#4F2B01] p-3 rounded-r-full text-lg font-medium">
+        <span className="bg-gray-300 text-gray-800 p-3 rounded-r-full text-lg font-medium">
           Others
         </span>
         <div className="my-6 flex flex-col md:flex-row overflow-x-auto gap-6">
@@ -85,7 +85,10 @@ function FindJobsPage() {
 
 const JobCard = () => {
   return (
-    <div className="bg-white p-6 w-full min-w-full md:min-w-0 rounded-xl flex flex-col gap-2 shadow-md border md:max-w-sm">
+    <Link
+      to="/job/kryptolite"
+      className="bg-white p-6 w-full min-w-full md:min-w-0 rounded-xl flex flex-col gap-2 shadow-md border md:max-w-sm"
+    >
       <div className="flex justify-between items-center mb-3">
         <div className="flex items-center gap-1">
           <MdLocationOn size={24} className="text-gray-600" />
@@ -93,8 +96,10 @@ const JobCard = () => {
         </div>
         <p className="text-[#8B7D00]">#Featured</p>
       </div>
-      <p className="text-3xl font-medium text-gray-700">Moderator</p>
-      <p className="text-lg font-normal text-gray-500 -mt-3">
+      <p className="text-3xl font-medium text-gray-700">
+        Regional Marketing Manager
+      </p>
+      <p className="text-lg font-normal text-gray-600 -mt-2">
         The Kryptolite Universe
       </p>
       <p className="text-xl text-gray-700 mb-2">
@@ -110,7 +115,7 @@ const JobCard = () => {
           </div>
         ))}
       </div>
-    </div>
+    </Link>
   );
 };
 export default FindJobsPage;
