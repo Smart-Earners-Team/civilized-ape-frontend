@@ -12,7 +12,7 @@ function FindJobsPage() {
       <Navbar />
       <section className="w-full h-[90vh] relative">
         <StaticImage
-          src="../images/pexels-vlada-karpovich-4050320.jpg"
+          src="../../images/pexels-vlada-karpovich-4050320.jpg"
           alt=""
           className="w-full h-full"
         />
