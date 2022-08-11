@@ -8,15 +8,15 @@
     @apply font-inter text-base md:text-lg;
   }
   h1 {
-    @apply text-5xl md:text-6xl mb-7 md:mb-8;
+    @apply text-5xl md:text-6xl mb-7 md:my-8;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl mb-6 md:mb-7;
+    @apply text-4xl md:text-5xl mb-6 md:my-6;
   }
 
   h3 {
-    @apply text-3xl md:text-4xl mb-4 md:mb-6;
+    @apply text-3xl md:text-4xl mb-4 md:mb-4;
   }
 
   h1,
