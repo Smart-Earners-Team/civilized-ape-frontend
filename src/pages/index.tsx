@@ -190,10 +190,7 @@ const IndexPage = () => {
               Join The Waiting List
             </h2>
             <p className="font-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel,
-              rhoncus lectus ultricies ut sed imperdiet sit at. In mattis sed
-              fermentum lorem. Cursus mattis ipsum aliquam, sit enim scelerisque
-              ridiculus viverra. Augue sed quam molestie id senectus.
+              Request access by confirming your email address.
             </p>
             <div className="flex justify-between items-stretch my-5 w-full max-w-sm shadow-md">
               <input
