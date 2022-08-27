@@ -4,6 +4,8 @@ import ReactPlayer from "react-player";
 import heroVideo from "../assets/hero_video.mp4";
 import {
   RiArrowDropRightFill,
+  RiDiscordFill,
+  RiMediumFill,
   RiSearchLine,
   RiTelegramFill,
   RiTwitterFill,
@@ -244,6 +246,12 @@ const IndexPage = () => {
           </Link>
           <Link to="https://twitter.com/CivilizedApeDAO">
             <RiTwitterFill className="w-6 h-6 text-blue-800" />
+          </Link>
+          <Link to="https://discord.gg/QZzZHhYGaR">
+            <RiDiscordFill className="w-6 h-6 text-blue-800" />
+          </Link>
+          <Link to="https://medium.com/@civilizedapetown">
+            <RiMediumFill className="w-6 h-6 text-blue-800" />
           </Link>
         </div>
       </Section>
