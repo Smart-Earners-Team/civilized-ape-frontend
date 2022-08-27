@@ -12,9 +12,10 @@ import TypistLoop from "../components/Typist";
 import Typist from "react-typist";
 import Section from "../components/Section";
 import { StaticImage } from "gatsby-plugin-image";
-import Person from "../components/Person";
+import PersonChip from "../components/PersonChip";
 import { Navbar } from "../components/Navbar";
 import { Fragment } from "react";
+import { teams } from "../data/teams";
 
 const IndexPage = () => {
   return (
@@ -60,7 +61,7 @@ const IndexPage = () => {
             <h1 className="text-7xl font-black text-center max-w-6xl text-[#FEF3C0] text-stroke">
               <TypistLoop interval={0}>
                 {[
-                  "Deep in the heart of Brocéliande Forest roam a troop of 10,000 Ape",
+                  "Deep in the heart of Brocéliande Forest roam a troop of 10,000 Apes",
                   "",
                 ].map((text) => (
                   <Typist key={text} startDelay={0}>
@@ -203,8 +204,15 @@ const IndexPage = () => {
             cApe Team
           </h2>
           <div className="flex flex-wrap gap-6 justify-center">
-            {new Array(8).fill("").map((e, i) => (
-              <Person />
+            {teams.map((t, i) => (
+              <PersonChip
+                name={t.name}
+                role={t.role}
+                socials={t.socials}
+                key={i}
+                image={t.image}
+                aka={t.aka}
+              />
             ))}
           </div>
         </Section>
