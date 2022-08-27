@@ -91,13 +91,13 @@ const IndexPage = () => {
         </Section>
         <Section
           padding
-          className="flex flex-col md:flex-row items-start sm:items-center md:items-start gap-10 md:justify-around"
+          className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-10 md:justify-around"
           containerClass="bg-white"
         >
           <StaticImage
-            src="../images/Group-9.png"
-            alt="Group 9"
-            className="w-full max-w-lg"
+            src="../images/rare-digital-gems.jpg"
+            alt="Rare Digital Art of cApes"
+            className="max-w-lg"
           />
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Rare Digital Art</h2>
@@ -110,7 +110,7 @@ const IndexPage = () => {
         </Section>
         <Section
           padding
-          className="flex flex-col md:flex-row items-start gap-8 sm:items-center md:items-start md:justify-around"
+          className="flex flex-col md:flex-row items-start gap-8 sm:items-center md:items-center md:justify-around"
           containerClass="bg-[#F3F3F3]/90"
         >
           <div className="flex flex-col items-start gap-2 max-w-lg">
@@ -151,13 +151,14 @@ const IndexPage = () => {
         </Section>
         <Section
           padding
-          className="flex flex-col md:flex-row items-start sm:items-center md:items-start gap-8 md:justify-around"
+          className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-8 md:justify-around"
           containerClass="bg-white"
         >
           <StaticImage
-            src="../images/Group 3.png"
-            alt="Group 3"
+            src="../images/flat-globe.jpg"
+            alt="A flat globe"
             className="w-full max-w-lg"
+            layout="fullWidth"
           />
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Member Only Benefits</h2>
@@ -225,16 +226,16 @@ const IndexPage = () => {
         </Section>
       </main>
       <Section
-        padding
-        className="flex flex-col items-stretch gap-2"
-        containerClass="bg-[#F3F3F3]/90"
+        className="flex flex-col md:flex-row items-center justify-center gap-4"
+        containerClass="bg-[#F3F3F3]/90 py-5"
       >
-        <h3 className="md:text-4xl font-semibold text-center text-black">
-          cApe
-        </h3>
+        <div className="flex justify-center">
+          <StaticImage src="../../images/icon.png" alt="cApe Logo" width={50} />
+        </div>
+
         <p className="text-gray-700 text-center text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, natus.
-          Itaque laudantium.
+          A community of 10,000 Civilized Apes teeming with life. We symbolize
+          freedom and the possibility of a life truly lived.
         </p>
         {/* <div className="text-center flex justify-center gap-2 font-medium">
           <Link to="#">Explore</Link>
