@@ -100,12 +100,10 @@ const IndexPage = () => {
             className="w-full max-w-lg"
           />
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
-            <h2>
-              Become a Digital Art Collector And Discover Rare Digital Art
-            </h2>
+            <h2>Rare Digital Art</h2>
             <p className="text-xl">
-              Our genesis collection is comprised of 10,000 individually unique
-              NFTs and is emblazoned with over 200 traits including expression,
+              Our genesis collection is made of 10,000 individually unique NFTs
+              and emblazoned with over 200 traits including expression,
               headwear, posture, clothing, and more
             </p>
           </div>
