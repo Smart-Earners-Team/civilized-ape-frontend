@@ -4,8 +4,8 @@ import ReactPlayer from "react-player";
 import heroVideo from "../assets/hero_video.mp4";
 import {
   RiArrowDropRightFill,
-  RiFacebookFill,
   RiSearchLine,
+  RiTelegramFill,
   RiTwitterFill,
 } from "react-icons/ri";
 import TypistLoop from "../components/Typist";
@@ -239,8 +239,12 @@ const IndexPage = () => {
           <Link to="#">Jobs</Link>
         </div> */}
         <div className="flex items-center justify-center gap-2">
-          <RiFacebookFill className="w-6 h-6 text-blue-800" />
-          <RiTwitterFill className="w-6 h-6 text-blue-800" />
+          <Link to="https://t.me/CivilizedApeDAO">
+            <RiTelegramFill className="w-6 h-6 text-blue-800" />
+          </Link>
+          <Link to="https://twitter.com/CivilizedApeDAO">
+            <RiTwitterFill className="w-6 h-6 text-blue-800" />
+          </Link>
         </div>
       </Section>
     </Fragment>
