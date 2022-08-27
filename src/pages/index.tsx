@@ -155,7 +155,7 @@ const IndexPage = () => {
             className="w-full max-w-lg"
           />
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <h2>Member Only Benefits</h2>
             <ol>
               <li>
                 We are creating unique member experiences and utility by forging
