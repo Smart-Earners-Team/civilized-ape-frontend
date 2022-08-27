@@ -7,10 +7,5 @@ export interface NavigationType extends BaseNavigationType {
   children?: NavigationType[];
 }
 export const navigationItems: NavigationType[] = [
-  {
-    id: 1,
-    title: "Explore",
-    href: "#",
-  },
-  { id: 2, title: "Jobs", href: "/jobs" },
+  // { id: 1, title: "Jobs", href: "/#" },
 ];

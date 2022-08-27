@@ -26,7 +26,7 @@ const IndexPage = () => {
           <h1 className="text-2xl font-medium text-[#483635] h-36 flex items-center">
             <TypistLoop interval={0}>
               {[
-                "Deep in the heart of Brocéliande Forest roam a troop of 10,000 Ape",
+                "Deep in the heart of Brocéliande Forest roam a troop of 10,000 Apes",
                 "",
               ].map((text) => (
                 <Typist key={text} startDelay={0}>
@@ -102,9 +102,9 @@ const IndexPage = () => {
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Rare Digital Art</h2>
             <p className="text-xl">
-              Our genesis collection is made of 10,000 individually unique NFTs
-              and emblazoned with over 200 traits including expression,
-              headwear, posture, clothing, and more
+              Our genesis collection is made up of 10,000 individually unique
+              NFTs and emblazoned with over 200 traits including expression,
+              headwear, posture, clothing, and more.
             </p>
           </div>
         </Section>
@@ -137,6 +137,11 @@ const IndexPage = () => {
               <li>Content Creation</li>
               <li>Career Development</li>
             </ol>
+            <p className="text-xl my-5">
+              Become a member and get access to first hand training and
+              thousands of freelancing (part time and full-time) home based
+              online jobs opportunities.
+            </p>
           </div>
           <StaticImage
             src="../images/image 3.png"
@@ -156,7 +161,7 @@ const IndexPage = () => {
           />
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Member Only Benefits</h2>
-            <ol>
+            <ol className="space-y-4">
               <li>
                 We are creating unique member experiences and utility by forging
                 partnerships with projects across the physical and web3 world.
@@ -166,6 +171,10 @@ const IndexPage = () => {
                 where daily Alpha calls, IDO's, Degens, NFT's, Trading Signals,
                 Coupon codes for some exclusive courses and events etc. are
                 shared.
+              </li>
+              <li>
+                We provide complete support and training to help you succeed and
+                utilize your fullest potential.
               </li>
             </ol>
           </div>
@@ -227,10 +236,10 @@ const IndexPage = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, natus.
           Itaque laudantium.
         </p>
-        <div className="text-center flex justify-center gap-2 font-medium">
+        {/* <div className="text-center flex justify-center gap-2 font-medium">
           <Link to="#">Explore</Link>
           <Link to="#">Jobs</Link>
-        </div>
+        </div> */}
         <div className="flex items-center justify-center gap-2">
           <RiFacebookFill className="w-6 h-6 text-blue-800" />
           <RiTwitterFill className="w-6 h-6 text-blue-800" />

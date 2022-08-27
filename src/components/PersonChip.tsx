@@ -8,7 +8,7 @@ function PersonChip({ name, role, socials, aka, image }: Person) {
       className="w-[45%] sm:w-[30%] lg:w-[18%] shadow-md border-b-4 border-gray-300 flex flex-col gap-4 justify-center items-center
         py-4 text-center rounded-md lg:gap-6"
     >
-      <div className="w-24 h-24 rounded-full bg-gray-200 p-0.5">
+      <div className="w-24 h-24 rounded-full bg-[#4D3937] p-0.5">
         <img
           src={`/team-headshots/${image}`}
           alt=""

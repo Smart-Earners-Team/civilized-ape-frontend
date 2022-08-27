@@ -4,6 +4,7 @@ import cls from "classnames";
 import { BiCaretDown } from "react-icons/bi";
 import { navigationItems } from "./data";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -25,7 +26,13 @@ export default function Navbar() {
     >
       <div className="flex flex-col py-6 px-4 md:items-center md:gap-6 md:flex-row md:px-6">
         <div className="flex flex-row items-center justify-between">
-          <div>cApp</div>
+          <div>
+            <StaticImage
+              src="../../images/icon.png"
+              alt="cApe Logo"
+              width={50}
+            />
+          </div>
           <button
             className="rounded-lg md:hidden p-1 hover:bg-primary-200 focus:outline-none
               focus:bg-primary-200 hover:text-primary focus:text-primary"
