@@ -105,13 +105,15 @@ const IndexPage = () => {
           className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-10 md:justify-around"
           containerClass="bg-white"
         >
-          <div className="relative max-w-md mt-10">
+          <div className="relative max-w-sm mt-10">
             <Carousel
               preventMovementUntilSwipeScrollTolerance={true}
               swipeScrollTolerance={50}
               showArrows={false}
               autoPlay
               showThumbs={false}
+              interval={1000}
+              infiniteLoop
             >
               <StaticImage
                 src="../images/cApe-Town-NFT-7.png"
