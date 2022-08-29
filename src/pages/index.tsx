@@ -165,8 +165,8 @@ const IndexPage = () => {
           <div className="flex flex-col items-start gap-2 max-w-lg">
             <h2>Building An Alpha Web3 community</h2>
             <StaticImage
-              src="../images/image 3.png"
-              alt="Group 9"
+              src="../images/Building-An-Alpha-Web3-community.png"
+              alt="Building-An-Alpha-Web3-community"
               className="w-full max-w-lg !block md:!hidden"
             />
             <p className="text-xl my-5">
@@ -193,8 +193,8 @@ const IndexPage = () => {
             </p>
           </div>
           <StaticImage
-            src="../images/image 3.png"
-            alt="Group 9"
+            src="../images/Building-An-Alpha-Web3-community.png"
+            alt="Building-An-Alpha-Web3-community"
             className="w-full max-w-lg !hidden md:!block"
           />
         </Section>
@@ -203,7 +203,12 @@ const IndexPage = () => {
           className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-8 md:justify-around"
           containerClass="bg-white"
         >
-          <div className="flex flex-col items-center md:gap-2 max-w-screen-md md:text-center">
+          <StaticImage
+            src="../images/Member-Only-Benefits.png"
+            alt="Member Only Benefits"
+            className="w-full max-w-lg"
+          />
+          <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Member Only Benefits</h2>
             <ol className="space-y-4">
               <li>
