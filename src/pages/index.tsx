@@ -93,7 +93,7 @@ const IndexPage = () => {
             We symbolize freedom and the possibility of a life truly lived.
           </p>
           <AnchorLink
-            to="/#waitlist"
+            to="/#join-the-waitlist"
             className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6"
           >
             Join Waitlist
@@ -225,7 +225,7 @@ const IndexPage = () => {
           padding
           className="flex flex-col items-start gap-8"
           containerClass="bg-[#F3F3F3]/90"
-          id="#waitlist"
+          id="join-the-waitlist"
         >
           <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] w-full py-14 px-10 rounded-3xl">
             <h2 className="md:text-4xl text-[#4D3937] font-semibold">
