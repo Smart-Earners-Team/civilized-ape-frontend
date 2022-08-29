@@ -93,8 +93,7 @@ const IndexPage = () => {
             We symbolize freedom and the possibility of a life truly lived.
           </p>
           <AnchorLink
-            to="#join-the-waitlist"
-            stripHash
+            to="/#waitlist"
             className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6"
           >
             Join Waitlist
@@ -106,35 +105,43 @@ const IndexPage = () => {
           className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-10 md:justify-around"
           containerClass="bg-white"
         >
-          <div className="relative max-w-full mt-10">
+          <div className="relative max-w-md mt-10">
             <Carousel
               preventMovementUntilSwipeScrollTolerance={true}
               swipeScrollTolerance={50}
+              showArrows={false}
+              autoPlay
+              showThumbs={false}
             >
               <StaticImage
                 src="../images/cApe-Town-NFT-7.png"
                 alt="cApe Town NFT 7"
                 className="max-w-lg"
+                placeholder="blurred"
               />
               <StaticImage
                 src="../images/cApe-Town-NFT-9.png"
                 alt="cApe Town NFT 9"
                 className="max-w-lg"
+                placeholder="blurred"
               />
               <StaticImage
                 src="../images/cApe-Town-NFT-99.png"
                 alt="cApe Town NFT 99"
                 className="max-w-lg"
+                placeholder="blurred"
               />
               <StaticImage
                 src="../images/cApe-Town-NFT-999.png"
                 alt="cApe Town NFT 999"
                 className="max-w-lg"
+                placeholder="blurred"
               />
               <StaticImage
                 src="../images/cApe-Town-NFT-9999.png"
                 alt="cApe Town NFT 9999"
                 className="max-w-lg"
+                placeholder="blurred"
               />
             </Carousel>
           </div>
@@ -218,7 +225,7 @@ const IndexPage = () => {
           padding
           className="flex flex-col items-start gap-8"
           containerClass="bg-[#F3F3F3]/90"
-          id="#join-the-waitlist"
+          id="#waitlist"
         >
           <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] w-full py-14 px-10 rounded-3xl">
             <h2 className="md:text-4xl text-[#4D3937] font-semibold">
