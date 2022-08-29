@@ -204,7 +204,7 @@ const IndexPage = () => {
           containerClass="bg-white"
         >
           <StaticImage
-            src="../images/Member-Only-Benefits.png"
+            src="../images/member-only-benefits.png"
             alt="Member Only Benefits"
             className="w-full max-w-lg"
           />
