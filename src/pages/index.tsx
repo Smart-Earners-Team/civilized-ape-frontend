@@ -201,7 +201,7 @@ const IndexPage = () => {
           className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-8 md:justify-around"
           containerClass="bg-white"
         >
-          <div className="flex flex-col items-center md:gap-2 max-w-screen-md text-center">
+          <div className="flex flex-col items-center md:gap-2 max-w-screen-md md:text-center">
             <h2>Member Only Benefits</h2>
             <ol className="space-y-4">
               <li>
@@ -227,7 +227,7 @@ const IndexPage = () => {
           containerClass="bg-[#F3F3F3]/90"
           id="join-the-waitlist"
         >
-          <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] w-full py-14 px-10 rounded-3xl">
+          <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] w-full py-14 px-6 md:px-10 rounded-3xl">
             <h2 className="md:text-4xl text-[#4D3937] font-semibold">
               Join The Waiting List
             </h2>
