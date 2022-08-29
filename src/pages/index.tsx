@@ -65,8 +65,8 @@ const IndexPage = () => {
             width="100%"
             height="100%"
           />
-          <div className="hidden absolute top-0 left-0 w-full h-full bg-black/50 md:flex justify-center md:pt-20">
-            <h1 className="text-7xl font-black text-center max-w-6xl text-[#FEF3C0] text-stroke">
+          <div className="hidden absolute top-0 left-0 w-full h-full bg-black/30 md:flex justify-center md:pt-20">
+            <h1 className="text-6xl font-black text-center max-w-6xl text-[#FEF3C0] text-stroke">
               <TypistLoop interval={0}>
                 {[
                   "Deep in the heart of Brocéliande Forest roam a troop of 10,000 Apes",
@@ -167,7 +167,7 @@ const IndexPage = () => {
             <StaticImage
               src="../images/image 3.png"
               alt="Group 9"
-              className="w-full max-w-lg block md:hidden"
+              className="w-full max-w-lg !block md:!hidden"
             />
             <p className="text-xl my-5">
               We are on a mission to help you be the best you can be, through
