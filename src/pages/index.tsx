@@ -17,7 +17,6 @@ import PersonChip from "../components/PersonChip";
 import { Navbar } from "../components/Navbar";
 import { Fragment } from "react";
 import { teams } from "../data/teams";
-import Helment from "react-helmet";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
@@ -25,9 +24,6 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 const IndexPage = () => {
   return (
     <Fragment>
-      <Helment>
-        <script src="https://sendfox.com/js/form.js" defer async />
-      </Helment>
       <Navbar />
       <main>
         <section className="px-4 md:hidden">
@@ -342,4 +338,9 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+  <Fragment>
+    <title>Home Page</title>
+    <script src="https://sendfox.com/js/form.js" defer async />
+  </Fragment>
+);
