@@ -313,10 +313,6 @@ const IndexPage = () => {
           A community of 10,000 Civilized Apes teeming with life. We symbolize
           freedom and the possibility of a life truly lived.
         </p>
-        {/* <div className="text-center flex justify-center gap-2 font-medium">
-          <Link to="#">Explore</Link>
-          <Link to="#">Jobs</Link>
-        </div> */}
         <div className="flex items-center justify-center gap-2">
           <Link to="https://t.me/CivilizedApeDAO">
             <RiTelegramFill className="w-6 h-6 text-blue-800" />
