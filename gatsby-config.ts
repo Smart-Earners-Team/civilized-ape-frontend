@@ -30,6 +30,12 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-postcss",
     "gatsby-plugin-netlify",
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+      },
+    },
   ],
 };
 

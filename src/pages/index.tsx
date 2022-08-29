@@ -6,7 +6,6 @@ import {
   RiArrowDropRightFill,
   RiDiscordFill,
   RiMediumFill,
-  RiSearchLine,
   RiTelegramFill,
   RiTwitterFill,
 } from "react-icons/ri";
@@ -18,10 +17,17 @@ import PersonChip from "../components/PersonChip";
 import { Navbar } from "../components/Navbar";
 import { Fragment } from "react";
 import { teams } from "../data/teams";
+import Helment from "react-helmet";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const IndexPage = () => {
   return (
     <Fragment>
+      <Helment>
+        <script src="https://sendfox.com/js/form.js" defer async />
+      </Helment>
       <Navbar />
       <main>
         <section className="px-4 md:hidden">
@@ -86,21 +92,53 @@ const IndexPage = () => {
           <p className="text-xl">
             We symbolize freedom and the possibility of a life truly lived.
           </p>
-          <button className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6">
+          <AnchorLink
+            to="#join-the-waitlist"
+            stripHash
+            className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6"
+          >
             Join Waitlist
             <RiArrowDropRightFill className="text-white" />
-          </button>
+          </AnchorLink>
         </Section>
         <Section
           padding
           className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-10 md:justify-around"
           containerClass="bg-white"
         >
-          <StaticImage
-            src="../images/rare-digital-gems.jpg"
-            alt="Rare Digital Art of cApes"
-            className="max-w-lg"
-          />
+          <div className="relative max-w-full mt-10">
+            <Carousel
+              preventMovementUntilSwipeScrollTolerance={true}
+              swipeScrollTolerance={50}
+            >
+              <StaticImage
+                src="../images/cApe-Town-NFT-7.png"
+                alt="cApe Town NFT 7"
+                className="max-w-lg"
+              />
+              <StaticImage
+                src="../images/cApe-Town-NFT-9.png"
+                alt="cApe Town NFT 9"
+                className="max-w-lg"
+              />
+              <StaticImage
+                src="../images/cApe-Town-NFT-99.png"
+                alt="cApe Town NFT 99"
+                className="max-w-lg"
+              />
+              <StaticImage
+                src="../images/cApe-Town-NFT-999.png"
+                alt="cApe Town NFT 999"
+                className="max-w-lg"
+              />
+              <StaticImage
+                src="../images/cApe-Town-NFT-9999.png"
+                alt="cApe Town NFT 9999"
+                className="max-w-lg"
+              />
+            </Carousel>
+          </div>
+
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Rare Digital Art</h2>
             <p className="text-xl">
@@ -156,13 +194,7 @@ const IndexPage = () => {
           className="flex flex-col md:flex-row items-start sm:items-center md:items-center gap-8 md:justify-around"
           containerClass="bg-white"
         >
-          <StaticImage
-            src="../images/flat-globe.jpg"
-            alt="A flat globe"
-            className="w-full max-w-lg"
-            layout="fullWidth"
-          />
-          <div className="flex flex-col items-start md:gap-2 max-w-lg">
+          <div className="flex flex-col items-center md:gap-2 max-w-screen-md text-center">
             <h2>Member Only Benefits</h2>
             <ol className="space-y-4">
               <li>
@@ -186,24 +218,59 @@ const IndexPage = () => {
           padding
           className="flex flex-col items-start gap-8"
           containerClass="bg-[#F3F3F3]/90"
+          id="#join-the-waitlist"
         >
-          <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] py-14 px-10 sm:text-center rounded-3xl">
+          <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] w-full py-14 px-10 rounded-3xl">
             <h2 className="md:text-4xl text-[#4D3937] font-semibold">
               Join The Waiting List
             </h2>
-            <p className="font-normal">
+            <p className="font-normal mb-4">
               Request access by confirming your email address.
             </p>
-            <div className="flex justify-between items-stretch my-5 w-full max-w-sm shadow-md">
+            <form
+              method="post"
+              action="https://sendfox.com/form/1v99pd/m80q7v"
+              id="m80q7v"
+              data-async="true"
+              data-recaptcha="true"
+              className="flex flex-col space-y-4 w-full max-w-md"
+            >
+              <input
+                type="text"
+                id="sendfox_form_name"
+                placeholder="First Name"
+                name="first_name"
+                required
+                className="bg-white placeholder-gray-600 font-light p-3 w-full outline-none border-none"
+              />
               <input
                 type="email"
-                className="bg-white placeholder-gray-600 font-light p-3 w-full outline-none border-none"
+                id="sendfox_form_email"
                 placeholder="Email"
+                name="email"
+                required
+                className="bg-white placeholder-gray-600 font-light p-3 w-full outline-none border-none"
               />
-              <button className="bg-[#4D3937] flex-none px-3 text-white">
-                <RiSearchLine className="h-6 w-6" />
+              <label className="text-sm text-opacity-25">
+                <input type="checkbox" name="gdpr" value="1" required /> I agree
+                to receive email updates and promotions.
+              </label>
+              <div
+                style={{ position: "absolute", left: "-5000px" }}
+                aria-hidden="true"
+              >
+                <input
+                  type="text"
+                  name="a_password"
+                  tabIndex={-1}
+                  value=""
+                  autoComplete="off"
+                />
+              </div>
+              <button className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6">
+                REQUEST EARLY ACCESS
               </button>
-            </div>
+            </form>
           </div>
         </Section>
         <Section padding containerClass="bg-white">
@@ -229,7 +296,7 @@ const IndexPage = () => {
         containerClass="bg-[#F3F3F3]/90 py-5"
       >
         <div className="flex justify-center">
-          <StaticImage src="../../images/icon.png" alt="cApe Logo" width={50} />
+          <StaticImage src="../images/icon.png" alt="cApe Logo" width={50} />
         </div>
 
         <p className="text-gray-700 text-center text-sm">
