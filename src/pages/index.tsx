@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { HeadFC, Link } from "gatsby";
 import ReactPlayer from "react-player";
 import heroVideo from "../assets/hero_video.mp4";
@@ -20,6 +20,9 @@ import { teams } from "../data/teams";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import Star from "../assets/images/star";
+import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 const IndexPage = () => {
   return (
@@ -224,6 +227,49 @@ const IndexPage = () => {
             </ol>
           </div>
         </Section>
+        <div className="border h-[400px] pt-8 overflow-y-hidden">
+          <CarouselProvider
+            naturalSlideWidth={100}
+            naturalSlideHeight={125}
+            totalSlides={8}
+          >
+            <Slider
+              className="h-[400px]"
+              classNameTray="sm:!w-[330%] lg:!w-[280%]"
+            >
+              {new Array(8).fill("a").map((e, i) => (
+                <Slide key={e + i} index={i}>
+                  <div className="bg-red-50 border-[3px] border-black p-6 rounded-xl max-w-full sm:max-w-md flex flex-col gap-4 flex-none">
+                    <div className="flex gap-2 items-stretch">
+                      <img
+                        src="/team-headshots/B.jpg"
+                        alt=""
+                        className="border-black border-[3px] rounded-full !w-12 !h-12"
+                      />
+                      <div className="text-base">
+                        <p className="font-bold">Justice E.</p>
+                        <p className="">Developer</p>
+                      </div>
+                    </div>
+                    <p className="font-normal text-base">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ducimus velit reprehenderit, placeat obcaecati error aut
+                      vitae culpa ea ipsa pariatur architecto nemo numquam, qui
+                      expedita praesentium. Perferendis expedita enim hic.
+                    </p>
+                    <div className="text-yellow-600 flex items-center gap-2">
+                      <Star />
+                      <Star />
+                      <Star />
+                      <Star />
+                      <Star />
+                    </div>
+                  </div>
+                </Slide>
+              ))}
+            </Slider>
+          </CarouselProvider>
+        </div>
         <Section
           padding
           className="flex flex-col items-start gap-8"
