@@ -16,12 +16,12 @@ import { StaticImage } from "gatsby-plugin-image";
 import PersonChip from "../components/PersonChip";
 import { Navbar } from "../components/Navbar";
 import { Fragment } from "react";
-import { teams } from "../data/teams";
+import { teams, testimonials } from "../data";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Star from "../assets/images/star";
-import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
+import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const IndexPage = () => {
@@ -232,13 +232,15 @@ const IndexPage = () => {
             naturalSlideWidth={100}
             naturalSlideHeight={125}
             totalSlides={8}
+            interval={2000}
+            isPlaying
           >
             <Slider
               className="h-[400px]"
-              classNameTray="sm:!w-[330%] lg:!w-[280%]"
+              classNameTray="sm:!w-[330%] lg:!w-[250%]"
             >
-              {new Array(8).fill("a").map((e, i) => (
-                <Slide key={e + i} index={i}>
+              {testimonials.map((person, i) => (
+                <Slide key={person.name} index={i}>
                   <div className="bg-red-50 border-[3px] border-black p-6 rounded-xl max-w-full sm:max-w-md flex flex-col gap-4 flex-none">
                     <div className="flex gap-2 items-stretch">
                       <img
@@ -247,16 +249,11 @@ const IndexPage = () => {
                         className="border-black border-[3px] rounded-full !w-12 !h-12"
                       />
                       <div className="text-base">
-                        <p className="font-bold">Justice E.</p>
-                        <p className="">Developer</p>
+                        <p className="font-bold">{person.name}</p>
+                        <p className="">Student</p>
                       </div>
                     </div>
-                    <p className="font-normal text-base">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Ducimus velit reprehenderit, placeat obcaecati error aut
-                      vitae culpa ea ipsa pariatur architecto nemo numquam, qui
-                      expedita praesentium. Perferendis expedita enim hic.
-                    </p>
+                    <p className="font-normal text-sm">{person.testimony}</p>
                     <div className="text-yellow-600 flex items-center gap-2">
                       <Star />
                       <Star />
@@ -289,7 +286,7 @@ const IndexPage = () => {
               id="m80q7v"
               data-async="true"
               data-recaptcha="true"
-              className="flex flex-col space-y-4 w-full max-w-md"
+              className="sendfox-form  flex flex-col space-y-4 w-full max-w-md"
             >
               <input
                 type="text"
