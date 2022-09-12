@@ -276,14 +276,14 @@ const IndexPage = () => {
           containerClass="bg-[#F3F3F3]/90"
           id="join-the-waitlist"
         >
-          <div className="flex flex-col sm:items-center items-start sm:gap-2 bg-[#ECD980] w-full py-14 px-6 md:px-10 rounded-3xl">
+          <div className="flex flex-col sm:items-center text-center items-start sm:gap-2 bg-[#ECD980] w-full py-14 px-6 md:px-10 rounded-3xl">
             <h2 className="md:text-4xl text-[#4D3937] font-semibold">
               Join The Waiting List
             </h2>
-            <p className="font-normal mb-4">
+            {/* <p className="font-normal mb-4">
               Request access by confirming your email address.
-            </p>
-            <form
+            </p> */}
+            {/*  <form
               method="post"
               action="https://sendfox.com/form/1v99pd/m80q7v"
               id="m80q7v"
@@ -323,10 +323,14 @@ const IndexPage = () => {
                   autoComplete="off"
                 />
               </div>
-              <button className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6">
-                REQUEST EARLY ACCESS
-              </button>
-            </form>
+            </form> */}
+            <Link
+              to="/early-access"
+              className="bg-[#4D3937] flex justify-center items-center py-2 px-4 text-white rounded-md text-lg md:mt-6
+              mx-auto"
+            >
+              REQUEST EARLY ACCESS
+            </Link>
           </div>
         </Section>
         <Section padding containerClass="bg-white">

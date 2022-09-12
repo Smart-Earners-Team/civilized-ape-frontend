@@ -57,8 +57,12 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <nav className={`${open ? "block" : "hidden"} md:block mt-4 border-t`}>
-          <ul className="flex flex-col gap-1 flex-grow pb-4 md:pb-0 md:flex-row md:items-center">
+        <nav
+          className={`${
+            open ? "block" : "hidden"
+          } md:block mt-4 border-t md:border-t-0`}
+        >
+          <ul className="flex flex-col gap-5 flex-grow pb-4 md:pb-0 md:flex-row md:items-center">
             {navigationItems.map((nav) => {
               if (nav.children) {
                 return (

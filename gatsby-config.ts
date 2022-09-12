@@ -37,6 +37,13 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-no-sourcemaps",
+    {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: "#B35048",
+        showSpinner: true,
+      },
+    },
   ],
 };
 
