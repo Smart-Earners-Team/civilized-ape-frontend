@@ -167,6 +167,7 @@ const IndexPage = () => {
               src="../images/Building-An-Alpha-Web3-community.png"
               alt="Building-An-Alpha-Web3-community"
               className="w-full max-w-lg !block md:!hidden"
+              placeholder="blurred"
             />
             <p className="text-xl my-5">
               We are on a mission to help you be the best you can be, through
@@ -195,6 +196,7 @@ const IndexPage = () => {
             src="../images/Building-An-Alpha-Web3-community.png"
             alt="Building-An-Alpha-Web3-community"
             className="w-full max-w-lg !hidden md:!block"
+            placeholder="blurred"
           />
         </Section>
         <Section
@@ -206,6 +208,7 @@ const IndexPage = () => {
             src="../images/member-only-benefits.png"
             alt="Member Only Benefits"
             className="w-full max-w-lg"
+            placeholder="blurred"
           />
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Member Only Benefits</h2>
@@ -349,7 +352,12 @@ const IndexPage = () => {
         containerClass="bg-[#F3F3F3]/90 py-5"
       >
         <div className="flex justify-center">
-          <StaticImage src="../images/icon.png" alt="cApe Logo" width={50} />
+          <StaticImage
+            src="../images/icon.png"
+            alt="cApe Logo"
+            width={50}
+            placeholder="blurred"
+          />
         </div>
 
         <p className="text-gray-700 text-center text-sm">

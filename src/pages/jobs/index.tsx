@@ -15,6 +15,7 @@ function FindJobsPage() {
           src="../../images/pexels-vlada-karpovich-4050320.jpg"
           alt=""
           className="w-full h-full"
+          placeholder="blurred"
         />
         <div
           className="absolute top-0 left-0 w-full h-full bg-black/70 md:flex justify-center px-6 md:pt-20 flex flex-col

@@ -234,7 +234,12 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
         containerClass="bg-[#F3F3F3]/90 py-5"
       >
         <div className="flex justify-center">
-          <StaticImage src="../images/icon.png" alt="cApe Logo" width={50} />
+          <StaticImage
+            src="../images/icon.png"
+            alt="cApe Logo"
+            width={50}
+            placeholder="blurred"
+          />
         </div>
 
         <p className="text-gray-700 text-center text-sm">

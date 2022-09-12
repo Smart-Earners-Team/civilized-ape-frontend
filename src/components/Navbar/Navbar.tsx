@@ -31,6 +31,7 @@ export default function Navbar() {
               src="../../images/icon.png"
               alt="cApe Logo"
               width={50}
+              placeholder="blurred"
             />
           </div>
           <button
