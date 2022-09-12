@@ -224,7 +224,16 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
         ) : (
           <Section padding>
             <p className="text-center text-yellow-700">
-              Thanks, We have collected your info.
+              HODL tight. You’re now on the waitlist!
+              <br />
+              <br />
+              Invite friends to join the waitlist with your unique referral link
+              and for every person that signs up, you’ll move up the list by 10
+              points! <br />
+              <br />
+              Your referral link:
+              <br />
+              https://civilizedApe.town/early-access/?uid={data.walletId}
             </p>
           </Section>
         )}
