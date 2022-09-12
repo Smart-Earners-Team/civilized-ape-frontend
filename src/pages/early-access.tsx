@@ -118,7 +118,7 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
       `https://kryptolite.rocks/F1288cF18B1FAaA35F40111c3E5d2f827e1E920E/cape-early-access.php?action=earlyAccess&walletId=${data.walletId}&email=${data.email}&tweetLink=${data.tweetLink}&referrer=${data.refID}`,
       {
         method: "get",
-        headers: { Origin: "http://localhost:8000" },
+        headers: { Origin: location.origin },
       }
     )
       .then(async (res) => {
@@ -129,7 +129,7 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
       })
       .catch((e) => console.error(e))
       .finally(() => setFetching(false));
-  }, [data]);
+  }, [data, location.origin]);
 
   return (
     <Fragment>

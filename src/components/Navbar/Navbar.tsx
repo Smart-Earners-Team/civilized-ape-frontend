@@ -25,7 +25,7 @@ export default function Navbar() {
       className="!max-w-screen-2xl bg-white shadow shadow-gray-400/20 md:bg-[#09030B] md:text-white"
     >
       <div className="flex flex-col py-6 px-4 md:items-center md:gap-6 md:flex-row md:px-6">
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between pb-2">
           <div>
             <StaticImage
               src="../../images/icon.png"
@@ -56,7 +56,7 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <nav className={`${open ? "block" : "hidden"} md:block`}>
+        <nav className={`${open ? "block" : "hidden"} md:block mt-4 border-t`}>
           <ul className="flex flex-col gap-1 flex-grow pb-4 md:pb-0 md:flex-row md:items-center">
             {navigationItems.map((nav) => {
               if (nav.children) {
