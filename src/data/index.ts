@@ -92,7 +92,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Meshack",
     testimony:
-      "Though I wasn't new to crypto, I learned a lot from the instructors. Perviously I was a spot trader, but the sessions have prepared me for trading the futures market, Market structures, volume, capital preservation etc  Thanks to cAPE class organisers",
+      "Though I wasn't new to crypto, I learned a lot from the instructors. Perviously I was a spot trader, but the sessions have prepared me for trading the futures market, Market structures, volume, capital preservation etc  Thanks to cApe class organisers",
   },
   {
     name: "Matthew",

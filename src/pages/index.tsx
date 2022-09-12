@@ -286,7 +286,7 @@ const IndexPage = () => {
               id="m80q7v"
               data-async="true"
               data-recaptcha="true"
-              className="sendfox-form  flex flex-col space-y-4 w-full max-w-md"
+              className="sendfox-form flex flex-col space-y-4 w-full max-w-md"
             >
               <input
                 type="text"
@@ -357,18 +357,18 @@ const IndexPage = () => {
           freedom and the possibility of a life truly lived.
         </p>
         <div className="flex items-center justify-center gap-2">
-          <Link to="https://t.me/CivilizedApeDAO">
+          <a href="https://t.me/CivilizedApeDAO">
             <RiTelegramFill className="w-6 h-6 text-blue-800" />
-          </Link>
-          <Link to="https://twitter.com/CivilizedApeDAO">
+          </a>
+          <a href="https://twitter.com/CivilizedApeDAO">
             <RiTwitterFill className="w-6 h-6 text-blue-800" />
-          </Link>
+          </a>
           <Link to="https://discord.gg/QZzZHhYGaR">
             <RiDiscordFill className="w-6 h-6 text-blue-800" />
           </Link>
-          <Link to="https://medium.com/@civilizedapetown">
+          <a href="https://medium.com/@civilizedapetown">
             <RiMediumFill className="w-6 h-6 text-blue-800" />
-          </Link>
+          </a>
         </div>
       </Section>
     </Fragment>

@@ -36,6 +36,7 @@ const config: GatsbyConfig = {
         offset: -100,
       },
     },
+    "gatsby-plugin-no-sourcemaps",
   ],
 };
 
