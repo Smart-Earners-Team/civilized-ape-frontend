@@ -14,6 +14,7 @@ import {
   RiDiscordFill,
   RiMediumFill,
 } from "react-icons/ri";
+import CopyToClipboard from "../components/CopyToClipboard";
 import { Navbar } from "../components/Navbar";
 import Section from "../components/Section";
 
@@ -231,9 +232,11 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
               and for every person that signs up, you’ll move up the list by 10
               points! <br />
               <br />
-              Your referral link:
-              <br />
-              https://civilizedApe.town/early-access/?uid={data.walletId}
+              <CopyToClipboard
+                canCopy={data.walletId.length > 0}
+                content={`https://civilizedApe.town/early-access/?uid=${data.walletId}`}
+                title="Your referral link:"
+              />
             </p>
           </Section>
         )}
