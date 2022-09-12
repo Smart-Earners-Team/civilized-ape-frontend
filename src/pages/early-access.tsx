@@ -106,7 +106,7 @@ function EarlyAccessPage({ location }: PageProps) {
     const url = `This is proof of my account ownership and request for early \
 access to Civilized Ape Town @CivilizedApeDAO\n
 ID: ${data.walletId}\n
-🌐 civilizedApe.town/?uid=${data.walletId} 🧧\n
+🌐 civilizedApe.town/early-access/?uid=${data.walletId} 🧧\n
 $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #CivilizedApeTown`;
 
     return prefix + encodeURIComponent(url);
