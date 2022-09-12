@@ -133,7 +133,7 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
 
   return (
     <Fragment>
-      <main className="h-screen">
+      <main className="min-h-screen">
         <Navbar />
         <Section padding>
           <h1 className="text-center">Request Early Access</h1>
