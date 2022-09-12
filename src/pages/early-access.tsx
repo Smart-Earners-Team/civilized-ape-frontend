@@ -169,7 +169,7 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
             {step === 1 && (
               <Section
                 padding
-                className="flex justify-center items-center flex-col text-center"
+                className="flex justify-center gap-4 items-center flex-col text-center"
               >
                 <input
                   type="email"
