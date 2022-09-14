@@ -23,7 +23,7 @@
     "@web3-react/walletconnect-connector": "^6.2.13",
     "buffer": "^6.0.3",
     "classnames": "^2.3.1",
-    "ethers": "^5.7.0",
+    "ethers": "5.6.9",
     "gatsby": "^4.23.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^2.20.0",
@@ -46,7 +46,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-transition-group": "^4.4.5",
     "react-typist": "^2.0.5",
-    "web3": "^1.8.0"
+    "web3": "1.7.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
