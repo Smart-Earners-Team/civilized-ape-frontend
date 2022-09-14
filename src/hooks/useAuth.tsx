@@ -41,7 +41,7 @@ const useAuth = () => {
             ) {
               if (connector instanceof WalletConnectConnector) {
                 const walletConnector = connector as WalletConnectConnector;
-                walletConnector.walletConnectProvider = undefined;
+                walletConnector.walletConnectProvider = null;
               }
               toastError(
                 "Wallet connection error",
