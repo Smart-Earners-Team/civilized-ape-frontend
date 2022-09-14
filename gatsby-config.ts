@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
-  graphqlTypegen: true,
+  graphqlTypegen: false,
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
@@ -37,6 +37,12 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-no-sourcemaps",
+    /* {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/components/GlobalAppWrapper.tsx"),
+      },
+    }, */
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
@@ -44,6 +50,7 @@ const config: GatsbyConfig = {
         showSpinner: true,
       },
     },
+    "gatsby-plugin-layout",
   ],
 };
 

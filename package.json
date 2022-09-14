@@ -16,10 +16,18 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@binance-chain/bsc-connector": "^1.0.0",
+    "@headlessui/react": "^1.7.1",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/walletconnect-connector": "^6.2.13",
+    "buffer": "^6.0.3",
     "classnames": "^2.3.1",
-    "gatsby": "^4.20.0",
+    "ethers": "^5.7.0",
+    "gatsby": "^4.23.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-layout": "^3.23.0",
     "gatsby-plugin-manifest": "^4.20.0",
     "gatsby-plugin-netlify": "^5.0.1",
     "gatsby-plugin-no-sourcemaps": "^4.22.0",
@@ -36,6 +44,7 @@
     "react-icons": "^4.4.0",
     "react-player": "^2.10.1",
     "react-responsive-carousel": "^3.2.23",
+    "react-transition-group": "^4.4.5",
     "react-typist": "^2.0.5"
   },
   "devDependencies": {
@@ -43,6 +52,7 @@
     "@types/react": "^18.0.16",
     "@types/react-dom": "^18.0.6",
     "@types/react-helmet": "^6.1.5",
+    "@types/react-transition-group": "^4.4.5",
     "@types/react-typist": "^2.0.3",
     "autoprefixer": "^10.4.8",
     "gatsby-plugin-postcss": "^5.20.0",

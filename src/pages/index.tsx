@@ -146,7 +146,6 @@ const IndexPage = () => {
               />
             </Carousel>
           </div>
-
           <div className="flex flex-col items-start md:gap-2 max-w-lg">
             <h2>Rare Digital Art</h2>
             <p className="text-xl">

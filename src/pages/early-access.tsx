@@ -14,9 +14,12 @@ import {
   RiDiscordFill,
   RiMediumFill,
 } from "react-icons/ri";
+import ConnectWalletButton from "../components/Buttons/ConnectWalletButton";
 import CopyToClipboard from "../components/CopyToClipboard";
 import { Navbar } from "../components/Navbar";
 import Section from "../components/Section";
+import useActiveWeb3React from "../hooks/useActiveWeb3React";
+import { useAppContext } from "../hooks/useAppContext";
 
 const truncateHash = (address: string, startLength = 7, endLength = 5) => {
   return (
@@ -30,76 +33,35 @@ interface FormData {
   walletId: string;
   tweetLink: string;
   refID: string;
+  wallet: string;
 }
 
 function EarlyAccessPage({ location }: PageProps) {
-  const [, setCurrentAccount] = useState(null);
   const [step, setStep] = useState(0);
   const [data, setData] = useState<FormData>({
     email: "",
     walletId: "",
     tweetLink: "",
     refID: "",
+    wallet: "",
   });
   const [fetching, setFetching] = useState(false);
   const [done, setDone] = useState(false);
+  const { refAddress } = useAppContext();
+  const { account } = useActiveWeb3React();
 
   const handleChange = (key: keyof FormData, value: string) => {
     setData((p) => ({ ...p, [key]: value }));
   };
 
-  const checkWalletIsConnected = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum || !ethereum.request) {
-      console.log("Make sure you have Metamask installed!");
-      return;
-    } else {
-      console.log("Wallet exists! We're ready to go!");
-    }
-
-    const accounts = await ethereum.request({ method: "eth_accounts" });
-
-    if (accounts.length !== 0) {
-      const account = accounts[0];
-      console.log("Found an authorized account: ", account);
-      setCurrentAccount(account);
+  useEffect(() => {
+    if (account) {
       setStep(1);
-      // Set wallet Id
       handleChange("walletId", truncateHash(account));
-    } else {
-      console.log("No authorized account found");
+      handleChange("wallet", account);
     }
-  };
-  const connectWalletHandler = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum || !ethereum.request) {
-      return alert("Please install Metamask!");
-    }
-
-    try {
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      console.log("Found an account! Address: ", accounts[0]);
-      setCurrentAccount(accounts[0]);
-      setStep(1);
-      // Set wallet Id
-      handleChange("walletId", truncateHash(accounts[0]));
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  useEffect(() => {
-    checkWalletIsConnected();
-  }, []);
-
-  useEffect(() => {
-    const ref = new URLSearchParams(location.search).get("uid") || "-";
-    handleChange("refID", ref);
-  }, [location.search]);
+    handleChange("refID", refAddress);
+  }, [account, refAddress]);
 
   const twitterLink = useMemo(() => {
     const prefix = "https://twitter.com/intent/tweet?text=";
@@ -107,7 +69,7 @@ function EarlyAccessPage({ location }: PageProps) {
     const url = `This is proof of my account ownership and request for early \
 access to Civilized Ape Town @CivilizedApeDAO\n
 ID: ${data.walletId}\n
-🌐 civilizedApe.town/early-access/?uid=${data.walletId} 🧧\n
+🌐 civilizedApe.town/?uid=${data.walletId} 🧧\n
 $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #CivilizedApeTown`;
 
     return prefix + encodeURIComponent(url);
@@ -116,7 +78,7 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
   const handleSubmit = useCallback(() => {
     setFetching(true);
     fetch(
-      `https://kryptolite.rocks/F1288cF18B1FAaA35F40111c3E5d2f827e1E920E/cape-early-access.php?action=earlyAccess&walletId=${data.walletId}&email=${data.email}&tweetLink=${data.tweetLink}&referrer=${data.refID}`,
+      `https://kryptolite.rocks/F1288cF18B1FAaA35F40111c3E5d2f827e1E920E/cape-early-access.php?action=earlyAccess&wallet=${data.wallet}&walletId=${data.walletId}&email=${data.email}&tweetLink=${data.tweetLink}&referrer=${data.refID}`,
       {
         method: "get",
         headers: { Origin: location.origin },
@@ -164,7 +126,7 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
                 className="flex justify-center items-center gap-4 flex-col text-center"
               >
                 <p>Please connect your wallet to continue</p>
-                <Button onClick={connectWalletHandler}>Connect wallet</Button>
+                <ConnectWalletButton />
               </Section>
             )}
             {step === 1 && (
@@ -230,12 +192,14 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
               <br />
               Invite friends to join the waitlist with your unique referral link
               and for every person that signs up, you’ll move up the list by 10
-              points! <br />
+              points!
+              <br />
+              <br />
+              <p>Your referral link:</p>
               <br />
               <CopyToClipboard
                 canCopy={data.walletId.length > 0}
-                content={`https://civilizedApe.town/early-access/?uid=${data.walletId}`}
-                title="Your referral link:"
+                content={`https://civilizedApe.town/?uid=${data.walletId}`}
               />
             </p>
           </Section>
