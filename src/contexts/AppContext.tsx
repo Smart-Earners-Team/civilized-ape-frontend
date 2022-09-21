@@ -6,7 +6,7 @@ import { useInactiveListener } from "../hooks/useInactiveListener";
 import useQuery from "../hooks";
 
 export interface GlobalAppContext {
-  wallet: {
+  cApeWallet: {
     active: boolean;
     isConnecting: boolean;
     error: Error | undefined;
@@ -16,7 +16,7 @@ export interface GlobalAppContext {
 }
 
 const defaultValues: GlobalAppContext = {
-  wallet: {
+  cApeWallet: {
     active: false,
     isConnecting: true,
     error: undefined,
@@ -68,7 +68,7 @@ export default function AppContext({
   return (
     <GlobalAppContextProvider.Provider
       value={{
-        wallet: {
+        cApeWallet: {
           active,
           isConnecting,
           error,

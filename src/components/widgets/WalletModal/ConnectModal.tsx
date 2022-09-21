@@ -57,7 +57,7 @@ const ConnectModal = ({
     : sortedConfig.slice(0, displayCount);
 
   const {
-    wallet: { isConnecting, active },
+    cApeWallet: { isConnecting, active },
   } = useAppContext();
 
   return (

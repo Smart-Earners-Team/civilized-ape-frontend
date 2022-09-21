@@ -15,7 +15,7 @@ const ConnectWalletButton = ({
   ...props
 }: ConnectWalletButtonProps) => {
   const {
-    wallet: { active, error, retry, isConnecting },
+    cApeWallet: { active, error, retry, isConnecting },
   } = useAppContext();
   const { account } = useActiveWeb3React();
 

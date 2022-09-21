@@ -124,7 +124,7 @@ $CTD #cApeTown #DAO #Community #NFTCommunity #ALPHA #nftart #NFT #EarlyAccess #C
             {step === 0 && (
               <Section
                 padding
-                className="flex justify-center items-center gap-4 flex-col text-center"
+                className="flex justify-center items-center gap-4 flex-col text-center max-w-sm"
               >
                 <p>Please connect your wallet to continue</p>
                 <ConnectWalletButton />
