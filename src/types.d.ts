@@ -3,6 +3,11 @@ declare module "*.mp4" {
   export = value;
 }
 
+declare module "*.png" {
+  const value: any;
+  export = value;
+}
+
 interface Window {
   ethereum?: {
     isMetaMask?: true;

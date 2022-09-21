@@ -1,4 +1,4 @@
-import { PageProps } from "gatsby";
+import { HeadFC, PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React, {
   Fragment,
@@ -18,6 +18,7 @@ import ConnectWalletButton from "../components/Buttons/ConnectWalletButton";
 import CopyToClipboard from "../components/CopyToClipboard";
 import { Navbar } from "../components/Navbar";
 import Section from "../components/Section";
+import SEO from "../components/SEO";
 import useActiveWeb3React from "../hooks/useActiveWeb3React";
 import { useAppContext } from "../hooks/useAppContext";
 
@@ -253,3 +254,11 @@ const Button: React.FC<
   </button>
 );
 export default EarlyAccessPage;
+
+export const Head: HeadFC = () => (
+  <SEO
+    title="Request early access to Civilized Ape Town"
+    description="Secure early access to Civilized Ape Town and be the first to get WL
+    (cApeList)."
+  />
+);

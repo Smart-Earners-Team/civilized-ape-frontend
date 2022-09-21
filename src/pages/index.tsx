@@ -21,7 +21,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Star from "../assets/images/star";
-import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
+import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const IndexPage = () => {
