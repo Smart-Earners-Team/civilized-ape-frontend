@@ -1,6 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
-
-const config: GatsbyConfig = {
+module.exports = {
   siteMetadata: {
     title: `civilized-ape-frontend`,
     siteUrl: `https://civilizedape.town`,
@@ -38,12 +36,12 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-no-sourcemaps",
-    /* {
+    {
       resolve: "gatsby-plugin-layout",
       options: {
         component: require.resolve("./src/components/GlobalAppWrapper.tsx"),
       },
-    }, */
+    },
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
@@ -51,8 +49,5 @@ const config: GatsbyConfig = {
         showSpinner: true,
       },
     },
-    "gatsby-plugin-layout",
   ],
 };
-
-export default config;

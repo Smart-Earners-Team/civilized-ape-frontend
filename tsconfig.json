@@ -105,7 +105,7 @@
   "include": [
     "./src/**/*",
     "gatsby-node.js",
-    "gatsby-config.ts",
+    "gatsby-config.js",
     "./plugins/**/*"
   ],
   "exclude": ["./node_modules/"]
