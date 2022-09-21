@@ -1,7 +1,6 @@
 import React, { useEffect, useState, createContext } from "react";
 import useActiveWeb3React from "../hooks/useActiveWeb3React";
 import connectorList, { resetWalletConnectConnector } from "../lib/connectors";
-import { ethers } from "ethers";
 import { useEagerConnect } from "../hooks/useEagerConnect";
 import { useInactiveListener } from "../hooks/useInactiveListener";
 import useQuery from "../hooks";
@@ -35,7 +34,7 @@ export default function AppContext({
   children: React.ReactNode;
 }) {
   const [isConnecting, setIsConnecting] = useState(false);
-  const { account, deactivate, active, error, library } = useActiveWeb3React();
+  const { deactivate, active, error } = useActiveWeb3React();
   // Refferal
   const [refAddress, setRefAddress] = useState("-");
   const refFromParams = useQuery().get("uid");
