@@ -18,7 +18,7 @@ export interface GlobalAppContext {
 const defaultValues: GlobalAppContext = {
   cApeWallet: {
     active: false,
-    isConnecting: true,
+    isConnecting: false,
     error: undefined,
     retry: () => {},
   },
